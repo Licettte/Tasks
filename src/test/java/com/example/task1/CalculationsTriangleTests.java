@@ -37,7 +37,7 @@ public class CalculationsTriangleTests {
 
         CalculationsTriangle calculationsTriangle = new CalculationsTriangle();
 
-        assertTrue("Должно быть не равно 0", !calculationsTriangle.isInTheSamePlane(pointA, pointB, pointC));
+        assertTrue("Должно быть не равно 0", calculationsTriangle.isInTheSamePlane(pointA, pointB, pointC));
     }
 
 //    @Test
