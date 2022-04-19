@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 public class CalculationsTriangle {
 
-    private double getLengthLine(Point pointB, Point pointA) { // get triangles side
+   private double getLengthLine(Point pointB, Point pointA) { // get triangles side
         return Math.sqrt(
                 Math.pow(pointA.getCoordinate().getX() - pointB.getCoordinate().getX(), 2) + (Math
                         .pow(pointA.getCoordinate().getY() - pointB.getCoordinate().getY(), 2)));
