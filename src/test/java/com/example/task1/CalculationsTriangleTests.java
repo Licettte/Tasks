@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 @SpringBootTest
@@ -19,26 +18,26 @@ public class CalculationsTriangleTests {
     Coordinate coordinate;
     Line line;
 
-//    @Autowired
-//    Coordinate coordinate1 = new Coordinate(1, 1);
-//    @Autowired
-//    Coordinate coordinate2 = new Coordinate(1, 4);
-//    @Autowired
-//    Coordinate coordinate3 = new Coordinate(6, 4);
+    @MockBean
+    Coordinate coordinate1 = new Coordinate(1, 1);
+    @MockBean
+    Coordinate coordinate2 = new Coordinate(1, 4);
+    @MockBean
+    Coordinate coordinate3 = new Coordinate(6, 4);
 
-//    @Autowired
-//    Point pointA = new Point(coordinate1);// каждая точка принимает две координаты.
-//    @Autowired
-//    Point pointB = new Point(coordinate2);
-//    @Autowired
-//    Point pointC = new Point(coordinate3);
+    @MockBean
+    Point pointA = new Point(coordinate1);// каждая точка принимает две координаты.
+    @MockBean
+    Point pointB = new Point(coordinate2);
+    @MockBean
+    Point pointC = new Point(coordinate3);
 
-    @Autowired
+
     CalculationsTriangle calculationsTriangle = new CalculationsTriangle();
 
     @Test
     public void testIsInTheSamePlane() {
-           assertTrue("Должно быть не равно 0", !calculationsTriangle.isInTheSamePlane(pointA, pointB, pointC));
+        assertTrue("Должно быть не равно 0", !calculationsTriangle.isInTheSamePlane(pointA, pointB, pointC));
     }
 
 //    @Test
