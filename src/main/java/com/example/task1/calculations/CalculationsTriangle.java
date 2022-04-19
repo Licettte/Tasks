@@ -2,7 +2,9 @@ package com.example.task1.calculations;
 
 import com.example.task1.shape.Point;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
+@Component
 @Data
 public class CalculationsTriangle {
 
@@ -29,9 +31,13 @@ public class CalculationsTriangle {
     }
 
     public boolean isRightTriangle(Point pointA, Point pointB, Point pointC) {
+
+        // добавить сортировку - гипотенуза - самая длиная сторона
         double lineA = getLengthLine(pointA, pointB);
         double lineB = getLengthLine(pointB, pointC);
         double lineC = getLengthLine(pointC, pointA);
+
+
 
         return (Math.pow(lineA, 2) + Math.pow(lineB, 2) == Math.pow(lineC, 2));
     }
