@@ -2,9 +2,7 @@ package com.example.task1.calculations;
 
 import com.example.task1.shape.Point;
 import lombok.Data;
-import org.springframework.stereotype.Component;
 
-@Component
 @Data
 public class CalculationsTriangle {
 
