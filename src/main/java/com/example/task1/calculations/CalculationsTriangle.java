@@ -4,6 +4,10 @@ import com.example.task1.shape.Point;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 @Component
 @Data
 public class CalculationsTriangle {
@@ -37,9 +41,15 @@ public class CalculationsTriangle {
         double lineB = getLengthLine(pointB, pointC);
         double lineC = getLengthLine(pointC, pointA);
 
+        List<Double> list = new ArrayList<>();
 
+        list.add(lineA);
+        list.add(lineB);
+        list.add(lineC);
+        // добавить сортировку - гипотенуза - самая длиная сторона
+        Collections.sort(list);
 
-        return (Math.pow(lineA, 2) + Math.pow(lineB, 2) == Math.pow(lineC, 2));
+        return (Math.pow(list.get(0), 2) + Math.pow(list.get(1), 2) == Math.pow(list.get(2), 2));
     }
 
 
