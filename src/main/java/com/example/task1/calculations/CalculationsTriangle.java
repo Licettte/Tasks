@@ -2,13 +2,17 @@ package com.example.task1.calculations;
 
 import com.example.task1.shape.Point;
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-@Component
+
+@Service
+@RequiredArgsConstructor
 @Data
 public class CalculationsTriangle {
 
