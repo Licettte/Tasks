@@ -8,7 +8,7 @@ import java.util.List;
 
 public final class UtilityCalculationsTriangle {
 
-    public UtilityCalculationsTriangle() {
+    private UtilityCalculationsTriangle() {
         throw new java.lang.UnsupportedOperationException("Utility class and cannot be instantiated");
     }
 
