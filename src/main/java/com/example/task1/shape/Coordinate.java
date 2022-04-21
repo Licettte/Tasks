@@ -1,15 +1,14 @@
 package com.example.task1.shape;
 
-import java.awt.Point;
 import java.util.Objects;
 
-public class Coordinate extends Point {
+public class Coordinate  {
     private int x;
     private int y;
 
-    public Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
+    public Coordinate(String x, String y) {
+        this.x = Integer.parseInt(x);
+        this.y = Integer.parseInt(y);
     }
 
     public double getX() {
@@ -39,5 +38,13 @@ public class Coordinate extends Point {
     @Override
     public int hashCode() {
         return Objects.hash(x, y);
+    }
+
+    @Override
+    public String toString() {
+        return "Coordinate{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

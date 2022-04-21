@@ -2,7 +2,7 @@ package com.example.task1.shape;
 
 import java.util.Objects;
 
-public class Point implements Shape {
+public class Point {
     private Coordinate coordinate;
 
     public Point(Coordinate coordinate) {
@@ -28,5 +28,12 @@ public class Point implements Shape {
     @Override
     public int hashCode() {
         return Objects.hash(coordinate);
+    }
+
+    @Override
+    public String toString() {
+        return "Point{" +
+                "coordinate=" + coordinate +
+                '}';
     }
 }

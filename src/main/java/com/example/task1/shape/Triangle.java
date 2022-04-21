@@ -2,7 +2,7 @@ package com.example.task1.shape;
 
 import java.util.Objects;
 
-public class Triangle implements Shape {
+public class Triangle {
     private Line lineA;
     private Line lineB;
     private Line lineC;
@@ -51,5 +51,14 @@ public class Triangle implements Shape {
     @Override
     public int hashCode() {
         return Objects.hash(lineA, lineB, lineC);
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "lineA=" + lineA +
+                ", lineB=" + lineB +
+                ", lineC=" + lineC +
+                '}';
     }
 }

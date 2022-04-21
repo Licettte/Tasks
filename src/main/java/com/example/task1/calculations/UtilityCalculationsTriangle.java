@@ -1,6 +1,8 @@
 package com.example.task1.calculations;
 
+import com.example.task1.shape.Line;
 import com.example.task1.shape.Point;
+import com.example.task1.shape.Triangle;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,20 +14,14 @@ public final class UtilityCalculationsTriangle {
         throw new java.lang.UnsupportedOperationException("Utility class and cannot be instantiated");
     }
 
-    private static double getLengthLine(Point pointB, Point pointA) { // get triangles side
+    private static double getLengthLine(Line line) { // get triangles side
         return Math.sqrt(
-                Math.pow(pointA.getCoordinate().getX() - pointB.getCoordinate().getX(), 2) + (Math
-                        .pow(pointA.getCoordinate().getY() - pointB.getCoordinate().getY(), 2)));
+                Math.pow(line.getPointA().getCoordinate().getX() - line.getPointB().getCoordinate().getX(), 2) + (Math
+                        .pow(line.getPointA().getCoordinate().getY() - line.getPointB().getCoordinate().getY(), 2)));
     }
 
-    public static double getPerimeter(Point pointA, Point pointB, Point pointC) {
-
-        double lineA = getLengthLine(pointA, pointB);
-        double lineB = getLengthLine(pointB, pointC);
-        double lineC = getLengthLine(pointC, pointA);
-
-        return lineA + lineB + lineC;
-
+    public static double getPerimeter(Triangle triangle) {
+        return getLengthLine(triangle.getLineA()) + getLengthLine(triangle.getLineB()) + getLengthLine(triangle.getLineC());
     }
 
     public static double findPointInTheSamePlane(Point a, Point b, Point c) {
@@ -41,11 +37,11 @@ public final class UtilityCalculationsTriangle {
 
     }
 
-    public static boolean isRightTriangle(Point pointA, Point pointB, Point pointC) {
+    public static boolean isRightTriangle(Triangle triangle) {
 
-        double lineA = getLengthLine(pointA, pointB);
-        double lineB = getLengthLine(pointB, pointC);
-        double lineC = getLengthLine(pointC, pointA);
+        double lineA = getLengthLine(triangle.getLineA());
+        double lineB = getLengthLine(triangle.getLineB());
+        double lineC = getLengthLine(triangle.getLineC());
 
         List<Double> list = new ArrayList<>();
 

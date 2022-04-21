@@ -2,7 +2,7 @@ package com.example.task1.shape;
 
 import java.util.Objects;
 
-public class Line implements Shape {
+public class Line {
     private Point pointA;
     private Point pointB;
 
@@ -38,5 +38,13 @@ public class Line implements Shape {
     @Override
     public int hashCode() {
         return Objects.hash(pointA, pointB);
+    }
+
+    @Override
+    public String toString() {
+        return "Line{" +
+                "pointA=" + pointA +
+                ", pointB=" + pointB +
+                '}';
     }
 }
