@@ -1,4 +1,4 @@
-package com.example.task1.shape;
+package Task_ET.shape;
 
 import java.util.Objects;
 

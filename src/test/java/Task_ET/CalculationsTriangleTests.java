@@ -1,13 +1,13 @@
-package com.example.task1;
+package Task_ET;
 
-import com.example.task1.shape.Coordinate;
-import com.example.task1.shape.Line;
-import com.example.task1.shape.Point;
-import com.example.task1.shape.Triangle;
+import Task_ET.shape.Coordinate;
+import Task_ET.shape.Line;
+import Task_ET.shape.Point;
+import Task_ET.shape.Triangle;
 import org.junit.jupiter.api.Test;
 
-import static com.example.task1.calculations.UtilityCalculationsTriangle.isInTheSamePlane;
-import static com.example.task1.calculations.UtilityCalculationsTriangle.isRightTriangle;
+import static Task_ET.calculations.UtilityCalculationsTriangle.isInTheSamePlane;
+import static Task_ET.calculations.UtilityCalculationsTriangle.isRightTriangle;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
 

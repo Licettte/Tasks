@@ -1,8 +1,8 @@
-package com.example.task1.calculations;
+package Task_ET.calculations;
 
-import com.example.task1.shape.Line;
-import com.example.task1.shape.Point;
-import com.example.task1.shape.Triangle;
+import Task_ET.shape.Line;
+import Task_ET.shape.Point;
+import Task_ET.shape.Triangle;
 
 import java.util.ArrayList;
 import java.util.Collections;

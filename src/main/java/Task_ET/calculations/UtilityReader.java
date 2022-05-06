@@ -1,4 +1,4 @@
-package com.example.task1.calculations;
+package Task_ET.calculations;
 
 import lombok.Data;
 
