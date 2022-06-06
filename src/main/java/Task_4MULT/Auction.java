@@ -3,6 +3,7 @@ package Task_4MULT;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Logger;
 
 public class Auction {
     private List<Lot> lots = new ArrayList<>();
@@ -18,6 +19,7 @@ public class Auction {
     }
 
     public static void main(String[] args) throws InterruptedException {
+
         Auction auction = new Auction();
 
         auction.getAuctionists().add(new Auctionist("Alice", auction.lock));
@@ -29,18 +31,13 @@ public class Auction {
         auction.getLots().add(new Lot("Picture", 10_000.0, numberOfAuctionist));
         auction.getLots().add(new Lot("Statue", 4_000.0, numberOfAuctionist));
 
-
         List<Thread> threads = new ArrayList<>();
 
-        System.out.println();
-        System.out.println("!!! Welcome to auction !!!");
-        System.out.println("===================");
+        Logger log = Logger.getLogger(Auction.class.getName());
 
         for (Lot lot : auction.getLots()) {
-            System.out.println();
-            System.out.println("++++++++++++++++");
-            System.out.println("Start auction for " + lot.getName());
-            System.out.println();
+
+            log.info("Start auction for " + lot.getName());
             threads.clear();
 
             for (Auctionist auctionist : auction.getAuctionists()) {
@@ -58,14 +55,9 @@ public class Auction {
             }
 
             if (lot.getOwner() == null) System.out.println(lot.getName() + " was cancelled");
-            else{
-                System.out.println();
-                System.out.println(lot.getName() + " was sold to " + lot.getOwner().getName() + " for $" + lot.getPrice());}
+            else {
+                log.info(lot.getName() + " was sold to " + lot.getOwner().getName() + " for $" + lot.getPrice());
+            }
         }
-
-        System.out.println("++++++++++++++++");
-        System.out.println();
-        System.out.println("===================");
-        System.out.println("!!! Good bye !!!");
     }
 }
