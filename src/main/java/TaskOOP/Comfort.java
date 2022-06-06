@@ -1,4 +1,4 @@
-package Task_OOP;
+package TaskOOP;
 
 public enum Comfort {
     FIRSTCLASS, SECONDCLASS, THIRDCLASS,
