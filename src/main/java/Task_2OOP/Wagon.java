@@ -1,4 +1,4 @@
-package Task_OOP;
+package Task_2OOP;
 
 public class Wagon {
     private final Comfort comfortType;

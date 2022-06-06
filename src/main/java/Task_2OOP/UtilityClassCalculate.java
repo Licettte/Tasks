@@ -1,4 +1,4 @@
-package Task_OOP;
+package Task_2OOP;
 
 import java.util.List;
 import java.util.stream.Collectors;

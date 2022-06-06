@@ -1,9 +1,9 @@
-package Task_ET.calculations;
+package Task_1ET.calculations;
 
-import Task_ET.shape.Coordinate;
-import Task_ET.shape.Line;
-import Task_ET.shape.Point;
-import Task_ET.shape.Triangle;
+import Task_1ET.shape.Coordinate;
+import Task_1ET.shape.Line;
+import Task_1ET.shape.Point;
+import Task_1ET.shape.Triangle;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
