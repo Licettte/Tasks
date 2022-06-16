@@ -1,4 +1,4 @@
-package Task_ET.calculations;
+package Task_1ET.calculations;
 
 import lombok.Data;
 
