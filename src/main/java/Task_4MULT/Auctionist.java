@@ -60,7 +60,6 @@ public class Auctionist implements Runnable {
             } finally {
                 lock.unlock();
             }
-
         }
     }
 }

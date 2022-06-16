@@ -5,12 +5,10 @@ import java.util.Objects;
 public class Coordinate  {
     private int x;
     private int y;
-
     public Coordinate(String x, String y) {
         this.x = Integer.parseInt(x);
         this.y = Integer.parseInt(y);
     }
-
     public double getX() {
         return x;
     }
@@ -26,7 +24,6 @@ public class Coordinate  {
     public void setY(int y) {
         this.y = y;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

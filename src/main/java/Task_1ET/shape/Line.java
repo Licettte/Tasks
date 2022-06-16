@@ -5,12 +5,10 @@ import java.util.Objects;
 public class Line {
     private Point pointA;
     private Point pointB;
-
     public Line(Point pointA, Point pointB) {
         this.pointA = pointA;
         this.pointB = pointB;
     }
-
     public Point getPointA() {
         return pointA;
     }
@@ -26,7 +24,6 @@ public class Line {
     public void setPointB(Point pointB) {
         this.pointB = pointB;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

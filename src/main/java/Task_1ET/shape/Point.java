@@ -1,7 +1,6 @@
 package Task_1ET.shape;
 
 import java.util.Objects;
-
 public class Point {
     private Coordinate coordinate;
 
@@ -24,7 +23,6 @@ public class Point {
         Point point = (Point) o;
         return Objects.equals(coordinate, point.coordinate);
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(coordinate);
