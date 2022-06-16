@@ -20,7 +20,6 @@ public class Auctionist implements Runnable {
     public String getName() {
         return name;
     }
-
     @Override
     public void run() {
         while (!Thread.currentThread().isInterrupted()) {

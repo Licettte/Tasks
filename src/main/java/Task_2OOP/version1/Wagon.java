@@ -1,4 +1,4 @@
-package Task_2OOP;
+package Task_2OOP.version1;
 
 public class Wagon {
     private final Comfort comfortType;
@@ -6,9 +6,7 @@ public class Wagon {
     private final int numberOfPassengers;
     private final Double weightLuggage;
     private final String name;
-
     private Food food;
-
     public Wagon(WagonBuilder builder) {
         this.comfortType = builder.comfortType;
         this.comfort = builder.comfort;
@@ -20,19 +18,15 @@ public class Wagon {
             this.food = builder.food;
         }
     }
-
     public int getComfort() {
         return comfort;
     }
-
     public int getNumberOfPassengers() {
         return numberOfPassengers;
     }
-
     public Double getWeightLuggage() {
         return weightLuggage;
     }
-
     public String getName() {
         return name;
     }
@@ -62,19 +56,15 @@ public class Wagon {
             this.comfort = comfort;
             this.numberOfPassengers = numberOfPassengers;
             this.weightLuggage = weightLuggage;
-
         }
-
         public WagonBuilder name(String name) {
             this.name = name;
             return this;
         }
-
         public WagonBuilder food(Food food) {
             this.food= food;
             return this;
         }
-
 
         public Wagon build() {
 
@@ -82,7 +72,6 @@ public class Wagon {
             doQualityCheck(wagon);
             return wagon;
         }
-
         public boolean doQualityCheck(Wagon wagon) {
             return (comfort != 0 && comfort <= 3) && (weightLuggage >= 0)&&(numberOfPassengers>=0);
         }

@@ -9,15 +9,12 @@ public class Auction {
     private List<Lot> lots = new ArrayList<>();
     private List<Auctionist> auctionists = new ArrayList<>();
     private ReentrantLock lock = new ReentrantLock();
-
     public List<Lot> getLots() {
         return lots;
     }
-
     public List<Auctionist> getAuctionists() {
         return auctionists;
     }
-
     public static void main(String[] args) throws InterruptedException {
 
         Auction auction = new Auction();

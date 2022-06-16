@@ -1,9 +1,14 @@
-package Task_2OOP;
+package Task_2OOP.version1;
+
+import Task_2OOP.version1.builder.Train;
 
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public final class UtilityClassCalculate {
+    static Logger log = Logger.getLogger(UtilityClassCalculate.class.getName());
+
     private UtilityClassCalculate() {
         throw new java.lang.UnsupportedOperationException("Utility class and cannot be instantiated");
     }
@@ -11,19 +16,19 @@ public final class UtilityClassCalculate {
     public static Integer getNumberOfPassenger(Train train) {
 
         Integer count = train.getWagons().stream().map(s -> s.getNumberOfPassengers()).reduce(0, (a, b) -> a + b);
-        System.out.println(count);
+        log.info(count + " count");
         return count;
     }
 
     public static double getWeight(Train train) {
         double sum = train.getWagons().stream().map(s -> s.getWeightLuggage()).mapToDouble(f -> f).sum();
-        System.out.println(sum);
+        log.info(sum + " sum");
         return sum;
     }
 
     public static List<Integer> getSortedByComfort(Train train) {
         List<Integer> sorted = train.getWagons().stream().map(s -> s.getComfort()).sorted().collect(Collectors.toList());
-        System.out.println(sorted);
+        log.info(sorted + " sorted");
         return sorted;
     }
 }
